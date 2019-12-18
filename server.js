@@ -17,7 +17,7 @@ const methodOverride = require('method-override')
  * import routers from controllers/
  *
  */
-const { templateRouter } = require('./controllers/template.js')
+const { restRouter } = require('./controllers/restaurant.js')
 
 
 /* Step 3
@@ -28,7 +28,7 @@ const { templateRouter } = require('./controllers/template.js')
 /* Step 3.a
  * ...to parse the body of the HTTP requests from a URL encoded string 
  */
-app.use(express.urlencoded({extended: true}))
+app.use(express.urlencoded({ extended: true }))
 
 /* Step 3.b 
  *
@@ -47,7 +47,7 @@ app.use(methodOverride('_method'))
  * use the `./public` directory to host static resources such as css and
  * image files 
  */
-app.use(express.static(__dirname+"/public"))
+app.use(express.static(__dirname + "/public"))
 
 /* Step 3.b
  *
@@ -61,7 +61,7 @@ app.set('view engine', 'hbs')
  * add router for the application to use. The first argument is a prefix to all
  * the paths defined in the router.
  */
-app.use('/helloworld', templateRouter)
+app.use('/restaurant', restaurantRouter)
 
 /* Step 5
  *
@@ -69,7 +69,7 @@ app.use('/helloworld', templateRouter)
  *
  * NOTE: keep these lines at the bottom of the file 
  */
-const PORT = process.env.PORT || 3000 
+const PORT = process.env.PORT || 3000
 
 /* Step 6
  *
