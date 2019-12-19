@@ -10,15 +10,15 @@ const restaurantRouter = express.Router()
 
 
 
-restaurantRouter.get('/', (req, res) => {
-  restaurantApi.getAllRestaurants()
-    .then((allRestaurants) => {
-      res.render('restaurant/allRestaurants', { allRestaurants })
-    })
-    .catch((error) => {
-      console.log(error)
-      res.send(error)
-    })
+restaurantRouter.get('/', async (req, res) => {
+  try {
+    const allRestaurants = await restaurantApi.getAllRestaurants();
+    res.render('restaurant/allRestaurants', { allRestaurants })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 })
 
 restaurantRouter.get('/new', (req, res) => {
