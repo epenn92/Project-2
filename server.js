@@ -20,7 +20,7 @@ const methodOverride = require('method-override')
 const { restaurantRouter } = require('./controllers/restaurant.js')
 const { menuRouter } = require('./controllers/menu.js')
 const { itemRouter } = require('./controllers/item.js')
-
+const { homepageRouter } = require('./controllers/homepage.js')
 /* Step 3
  *
  * Register middleware...
@@ -55,7 +55,9 @@ app.use(express.static(__dirname + "/public"))
  * set the view engine of express to use the hbs (handlebars) package 
  */
 app.set('view engine', 'hbs')
-
+// app.get('/', (req, res) => {
+//     res.redirect('/homepage/homepage')
+// })
 
 /* Step 4
  *
@@ -65,7 +67,7 @@ app.set('view engine', 'hbs')
 app.use('/restaurant', restaurantRouter)
 app.use('/menu', menuRouter)
 app.use('/item', itemRouter)
-
+app.use('/', homepageRouter)
 /* Step 5
  *
  * Set the port the server is to run on
