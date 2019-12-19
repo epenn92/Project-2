@@ -4,7 +4,7 @@ const mongoose = require('./connection.js')
 const MenuSchema = new mongoose.Schema({
   restaurantId: String,
   size: String,
-  variety: Boolean,
+  time: String,
   type: String,
   alcoholAvailable: Boolean
 })

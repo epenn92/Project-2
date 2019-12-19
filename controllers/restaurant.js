@@ -25,22 +25,27 @@ restaurantRouter.get('/new', (req, res) => {
   res.render('restaurant/createRestaurant')
 })
 
-restaurantRouter.get('/update/:restaurantId', (req, res) => {
-  restaurantApi.getRestaurantById(req.params.restaurantId)
-    .then((restaurant) => {
-      res.render('restaurant/updateRestaurant', { restaurant })
-    })
+restaurantRouter.get('/update/:restaurantId', async (req, res) => {
+  try {
+    const restaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    res.render('restaurant/updateRestaurant', { restaurant })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 })
 
-restaurantRouter.get('/:restaurantId', (req, res) => {
-  restaurantApi.getRestaurantById(req.params.restaurantId)
-    .then((singleRestaurant) => {
-      res.render('restaurant/singleRestaurant', { singleRestaurant })
-    })
-    .catch((error) => {
-      console.log(error)
-      res.send(error)
-    })
+
+restaurantRouter.get('/:restaurantId', async (req, res) => {
+  try {
+    const singleRestaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    res.render('restaurant/singleRestaurant', { singleRestaurant })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 })
 
 restaurantRouter.post('/', (req, res) => {

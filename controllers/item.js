@@ -10,37 +10,42 @@ const itemRouter = express.Router()
 
 
 
-itemRouter.get('/', (req, res) => {
-  itemApi.getAllItems()
-    .then((allItems) => {
-      res.render('item/allItems', { allItems })
-    })
-    .catch((error) => {
-      console.log(error)
-      res.send(error)
-    })
+itemRouter.get('/', async (req, res) => {
+  try {
+    const allItems = await itemApi.getAllItems();
+    res.render('item/allItems', { allItems })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 })
 
 itemRouter.get('/new', (req, res) => {
   res.render('item/createItem')
 })
 
-itemRouter.get('/update/:itemId', (req, res) => {
-  itemApi.getItemById(req.params.itemId)
-    .then((item) => {
-      res.render('item/updateItem', { item })
-    })
+itemRouter.get('/update/:itemId', async (req, res) => {
+  try {
+    const item = await itemApi.getItemById(req.params.itemId)
+    res.render('item/updateItem', { item })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 })
 
-itemRouter.get('/:itemId', (req, res) => {
-  itemApi.getItemById(req.params.itemId)
-    .then((singleItem) => {
-      res.render('item/singleItem', { singleItem })
-    })
-    .catch((error) => {
-      console.log(error)
-      res.send(error)
-    })
+
+itemRouter.get('/:itemId', async (req, res) => {
+  try {
+    const singleItem = await itemApi.getItemById(req.params.itemId)
+    res.render('item/singleItem', { singleItem })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 })
 
 itemRouter.post('/', (req, res) => {
