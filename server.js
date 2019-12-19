@@ -17,8 +17,9 @@ const methodOverride = require('method-override')
  * import routers from controllers/
  *
  */
-const { restRouter } = require('./controllers/restaurant.js')
-
+const { restaurantRouter } = require('./controllers/restaurant.js')
+const { menuRouter } = require('./controllers/menu.js')
+const { itemRouter } = require('./controllers/item.js')
 
 /* Step 3
  *
@@ -62,6 +63,8 @@ app.set('view engine', 'hbs')
  * the paths defined in the router.
  */
 app.use('/restaurant', restaurantRouter)
+app.use('/menu', menuRouter)
+app.use('/item', itemRouter)
 
 /* Step 5
  *

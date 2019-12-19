@@ -1,0 +1,23 @@
+<h1>single Menu</h1>
+
+<h1>{{singleMenu.type}}</h1>
+<h2>{{singleMenu._id}}</h2>
+
+<h4>{{singleMenu.size}}</h4>
+<h4>{{singleMenu.variety}}</h4>
+<h4>{{singleMenu.alcoholAvailable}}</h4>
+
+
+
+<a href="/menu/update/{{singleMenu._id}}">
+<button>Edit Menu</button>
+</a>
+
+<form method="POST" action="/menu/{{singleMenu._id}}?_method=DELETE">
+<input type="submit" value="Delete"/>
+</form>
+
+<a href="/menu">
+<button>Back to all menus</button>
+</a>
+

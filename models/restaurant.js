@@ -4,22 +4,22 @@ const mongoose = require('./connection.js')
 const RestaurantSchema = new mongoose.Schema({
   name: String,
   location: String,
-  OperationDays: Date,
+  operationDays: Date,
   isOpen: Boolean,
   priceRange: String
 })
 
 const RestaurantCollection = mongoose.model('restaurant', RestaurantSchema)
 
-const getRestaurantbyId = restId => {
-  return RestaurantCollection.findOne({ _id: restId });
+const getRestaurantById = restaurantId => {
+  return RestaurantCollection.findOne({ _id: restaurantId });
 }
 
 const getAllRestaurants = () => {
   return RestaurantCollection.find({})
 }
 
-const getRestaurantbyName = name => {
+const getRestaurantByName = name => {
   return RestaurantCollection.findOne({ name: name })
 }
 
@@ -27,16 +27,16 @@ const createRestaurant = newRestaurant => {
   return RestaurantCollection.create(newRestaurant)
 }
 
-const updateRestaurant = (restId, updatedRestaurant) => {
-  return RestaurantCollection.updateOne({ _id: restId }, updatedRestaurant)
+const updateRestaurant = (restaurantId, updatedRestaurant) => {
+  return RestaurantCollection.updateOne({ _id: restaurantId }, updatedRestaurant)
 }
 
-const deleteRestaurant = restId => {
-  return RestaurantCollection.deleteOne({ _id: restId })
+const deleteRestaurant = restaurantId => {
+  return RestaurantCollection.deleteOne({ _id: restaurantId })
 }
 
 module.exports = {
-  getRestaurantbyId,
+  getRestaurantById,
   getAllRestaurants,
   createRestaurant,
   updateRestaurant,

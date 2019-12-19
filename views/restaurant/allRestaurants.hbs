@@ -1,0 +1,14 @@
+<h1> All Restaurants </h1>
+
+<a href="/restaurant/new">
+<button>Create New Restaurant</button>
+</a>
+
+{{#each allRestaurants}}
+<a href="/restaurant/{{_id}}">
+<div>
+    <h3>{{name}}</h3>
+</div>
+</a>
+
+{{/each}}

@@ -1,0 +1,14 @@
+<h1> All Menus </h1>
+
+<a href="/menu/new">
+<button>Create New Menu</button>
+</a>
+
+{{#each allMenus}}
+<a href="/menu/{{_id}}">
+<div>
+    <h3>{{type}}</h3>
+</div>
+</a>
+
+{{/each}}

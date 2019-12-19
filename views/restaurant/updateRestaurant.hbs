@@ -1,0 +1,21 @@
+<h1>Edit Restaurant</h1>
+
+<form method="POST" action="/restaurant/{{restaurant._id}}?_method=PUT">
+
+  <input type="text" value="{{restaurant.name}}" placeholder="Restaurant" name="name" />
+
+  <input type="text" value="{{restaurant.location}}" placeholder="Address" name="location" />
+
+  <input type="date" value="{{restaurant.operationDays}}" name="operationDays" />
+
+  <input type="boolean" value="{{restaurant.isOpen}}" placeholder="Open now?" name="isOpen" />
+
+  <input type="text" value="{{restaurant.priceRange}}" placeholder="Price Range" name="priceRange" />
+
+  <input type="submit" value="Update Restaurant" />
+
+</form>
+
+<a href="/restaurant">
+<button>Back to all restaurants</button>
+</a>

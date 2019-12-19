@@ -1,0 +1,21 @@
+<h1>single Item</h1>
+
+<h1>{{singleItem.foodName}}</h1>
+<h2>{{singleItem._id}}</h2>
+
+<h4>{{singleItem.price}}</h4>
+<h4>{{singleItem.review}}</h4>
+
+
+<a href="/item/update/{{singleItem._id}}">
+<button>Edit Item</button>
+</a>
+
+<form method="POST" action="/item/{{singleItem._id}}?_method=DELETE">
+<input type="submit" value="Delete"/>
+</form>
+
+<a href="/item">
+<button>Back to all items</button>
+</a>
+

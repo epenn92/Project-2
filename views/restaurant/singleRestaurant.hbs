@@ -1,0 +1,22 @@
+<h1>single Restaurant</h1>
+
+<h1>{{singleRestaurant.name}}</h1>
+<h2>{{singleRestaurant._id}}</h2>
+
+<h4>{{singleRestaurant.location}}</h4>
+<h4>{{singleRestaurant.operationDays}}</h4>
+<h4>{{singleRestaurant.isOpen}}</h4>
+<h4>{{singleRestaurant.priceRange}}</h4>
+
+<a href="/restaurant/update/{{singleRestaurant._id}}">
+<button>Edit Restaurant</button>
+</a>
+
+<form method="POST" action="/restaurant/{{singleRestaurant._id}}?_method=DELETE">
+<input type="submit" value="Delete"/>
+</form>
+
+<a href="/restaurant">
+<button>Back to all restaurants</button>
+</a>
+
