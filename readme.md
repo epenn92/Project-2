@@ -9,6 +9,6 @@ This is my Restaurant App that will allow users to see prices of items and organ
 ### Instructions
 Tired of sitting down at a nice restaurant and being surprised at menu prices. No more! Know what you're walking into at all times for any restaurant in metro Atlanta.
 ### Wireframe
-![RestaurantAppERD](/images/Restaurant-ERD.jpeg)   
-![RestaurantAppWireframe](/Pictures/Restaurant-Wireframe.jpeg)
+![RestaurantAppERD](/images/restaurant-ERD.png)   
+![RestaurantAppWireframe](/images/restaurant-Wireframe.png)
 
