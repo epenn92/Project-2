@@ -21,14 +21,41 @@ menuRouter.get('/', async (req, res) => {
   }
 })
 
-menuRouter.get('/new', (req, res) => {
-  res.render('menu/createMenu')
+menuRouter.get('/new', async (req, res) => {
+  try {
+    const allRestaurants = await restaurantApi.getAllRestaurants()
+    res.render('menu/createMenu', { allRestaurants })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 })
 
 menuRouter.get('/update/:menuId', async (req, res) => {
+
   try {
     const menu = await menuApi.getMenuById(req.params.menuId)
-    res.render('menu/updateMenu', { menu })
+    const allRestaurants = await restaurantApi.getAllRestaurants()
+
+    let dropDown = []
+    for (let i = 0; i < allRestaurants.length; i++) {
+      const newRestaurant = {
+        _id: allRestaurants[i]._id,
+        name: allRestaurants[i].name
+      }
+
+      if (newRestaurant._id == menu.restaurantId) {
+        newRestaurant.selected = true
+      }
+      else {
+        newRestaurant.selected = true
+      }
+      dropDown.push(newRestaurant)
+    }
+
+    console.log(dropDown)
+    res.render('menu/updateMenu', { menu, allRestaurants: dropDown })
   }
   catch (error) {
     console.log(error)
@@ -40,7 +67,8 @@ menuRouter.get('/update/:menuId', async (req, res) => {
 menuRouter.get('/:menuId', async (req, res) => {
   try {
     const singleMenu = await menuApi.getMenuById(req.params.menuId)
-    res.render('menu/singleMenu', { singleMenu })
+    const allRestaurants = await restaurantApi.getRestaurantById(singleMenu.restaurantId)
+    res.render('menu/singleMenu', { singleMenu, allRestaurants })
   }
   catch (error) {
     console.log(error)

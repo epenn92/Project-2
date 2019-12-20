@@ -1,12 +1,15 @@
-<h1>single Menu</h1>
+<h1>Menu for {{allRestaurants.name}}</h1>
 
 <h1>{{singleMenu.type}}</h1>
-<h2>{{singleMenu._id}}</h2>
+{{!-- <h2>{{singleMenu._id}}</h2> --}}
 
 <h4>{{singleMenu.size}}</h4>
 <h4>{{singleMenu.time}}</h4>
 <h4>{{singleMenu.alcoholAvailable}}</h4>
 
+<a href="/restaurant/{{allRestaurants._id}}">
+<h3>View this restaurant!</h3>
+</a>
 
 
 <a href="/menu/update/{{singleMenu._id}}">

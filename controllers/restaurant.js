@@ -3,7 +3,7 @@ const express = require('express')
 
 
 const restaurantApi = require('../models/restaurant.js')
-
+const menuApi = require('../models/menu.js')
 
 const restaurantRouter = express.Router()
 
@@ -40,6 +40,7 @@ restaurantRouter.get('/update/:restaurantId', async (req, res) => {
 restaurantRouter.get('/:restaurantId', async (req, res) => {
   try {
     const singleRestaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    const allMenus = await menuApi.getAllMenus(singleRestaurant)
     res.render('restaurant/singleRestaurant', { singleRestaurant })
   }
   catch (error) {

@@ -1,6 +1,7 @@
 
 const express = require('express')
 
+const restaurantApi = require('../models/restaurant.js')
 const menuApi = require('../models/menu.js')
 const itemApi = require('../models/item.js')
 
@@ -38,8 +39,10 @@ itemRouter.get('/update/:itemId', async (req, res) => {
 
 
 itemRouter.get('/:itemId', async (req, res) => {
+  const singleItem = await itemApi.getItemById(req.params.itemId)
   try {
-    const singleItem = await itemApi.getItemById(req.params.itemId)
+
+
     res.render('item/singleItem', { singleItem })
   }
   catch (error) {

@@ -9,7 +9,13 @@
   <input type="text" value="" placeholder="What type of menu?" name="type" />
 
   <input type="boolean" value="" placeholder="Do they serve alcohol?" name="alcoholAvailable" />
-
+  {{!-- <label for=""></label> --}}
+  <select name="restaurantId" >
+    <option value="">None</option>
+{{#each allRestaurants}}
+<option value="{{_id}}">{{name}}</option>
+{{/each}}
+</select>
   <input type="submit" value="Create Menu" />
 
 </form>

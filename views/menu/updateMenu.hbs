@@ -1,4 +1,4 @@
-<h1>Edit Menu</h1>
+<h1>Update Menu</h1>
 
 <form method="POST" action="/menu/{{menu._id}}?_method=PUT">
 
@@ -10,15 +10,19 @@
 
   <input type="boolean" value="{{menu.alcoholAvailable}}" placeholder="Do they serve alcohol?" name="alcoholAvailable" />
 
+<select name="restaurantId">
+  {{#each allRestaurants}}
+  <option value="{{_id}}" {{#if selected}} selected {{/if}}>{{name}}</option>
+  {{/each}}
+
+  </select>
+
+
   <input type="submit" value="Update Menu" />
 
-</form>
-
-
-</form>
 
 <a href="/menu">
-<button>Back to all menus</button>
+<button>Back to this menu</button>
 </a>
 
 <a href="/">
