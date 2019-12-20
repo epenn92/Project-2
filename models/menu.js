@@ -31,11 +31,21 @@ const deleteMenu = (menuId) => {
   return MenuCollection.deleteOne({ _id: menuId })
 }
 
+const getAllMenuByRestaurant = (restaurantId) => {
+  return MenuCollection.find(restaurantId)
+}
+
+const getMenuByRestaurant = (restaurantId, menuId) => {
+  return MenuCollection.find(restaurantId, { _id: menuId })
+}
+
 module.exports = {
   getMenuById,
   getAllMenus,
   createMenu,
   updateMenu,
-  deleteMenu
+  deleteMenu,
+  getAllMenuByRestaurant,
+  getMenuByRestaurant,
 
 }

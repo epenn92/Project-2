@@ -48,6 +48,17 @@ menuRouter.get('/:menuId', async (req, res) => {
   }
 })
 
+menuRouter.get('/menu/:restaurantId', async (req, res) => {
+  try {
+    const restaurantMenu = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    res.render('menu/allRestaurantMenus', { restaurantMenu })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
+})
+
 menuRouter.post('/', (req, res) => {
   menuApi.createMenu(req.body)
     .then(() => {
