@@ -5,7 +5,7 @@ const ItemSchema = new mongoose.Schema({
   menuId: String,
   foodName: String,
   price: Number,
-  review: String
+  
 })
 
 const ItemCollection = mongoose.model('item', ItemSchema)

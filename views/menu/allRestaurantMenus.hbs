@@ -1,0 +1,25 @@
+<h1>{{restaurant.name}}</h1>
+
+
+{{#each allMenus}}
+<a href="/menu/{{_id}}">
+<div>
+    <h3>{{type}}</h3>
+</div>
+</a>
+
+{{/each}}
+
+
+<a href="/restaurant/{{restaurant._id}}">
+<button>Back to {{restaurant.name}}</button>
+</a>
+
+<a href="/menu/new">
+<button>Create a new menu</button>
+</a>
+
+
+<a href="/">
+<button>Back to landing page</button>
+</a>

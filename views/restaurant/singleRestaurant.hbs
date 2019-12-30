@@ -4,11 +4,12 @@
 <h4>{{singleRestaurant.operationDays}}</h4>
 <h4>{{singleRestaurant.isOpen}}</h4>
 <h4>{{singleRestaurant.priceRange}}</h4>
+<h4>{{singleRestaurant.rating}}</h4>
 
 
-
-<button>View Menus!</button>
-
+<a href="/menu/allRestaurantMenus/{{singleRestaurant._id}}">
+<button>View All Menus!</button>
+</a>
 
 
 <a href="/restaurant/update/{{singleRestaurant._id}}">
