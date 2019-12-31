@@ -8,21 +8,33 @@
 <head>
     <meta charset="utf-8">
     <title>Example App</title>
+    <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css" type="text/css">
 </head>
 <body>
 <header> 
   <nav class="navbar">
+    <ul class="navbarOptions">
+      <li>
     <a class="brand" href="/">
-    <img src="#"
-    </a>
+    <img src="/images/brand.png">
+    </a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="#">Restaurants</a></li>
+    <li><a href="#">Top Rated</a></li>
+    <li><a href="#">Contact Us</a></li>
+    
+    </ul>
   </nav>
 </header>
+<div class="content">
     <!--
       This is a place holder for the contents of the .hbs file that is
       rendered.
     -->
     {{{body}}}
 
+
+</div>
 </body>
 </html>
