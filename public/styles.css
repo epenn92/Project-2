@@ -255,4 +255,5 @@ color: white;
 .restaurantButton {
     text-align: center;
     background-color: darkgreen;
+    margin: 0 auto;
 }
