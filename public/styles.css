@@ -1,15 +1,25 @@
 body {
-    background-color: silver;
+    /* background-color: silver; */
     color: black;
     font-family: 'Acme', sans-serif;
+     /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
 }
 
 
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: lightgreen;
+    align-items: flex-start;
+    background: #00bf8f;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #001510, #00bf8f);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #001510, #00bf8f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
     position: fixed;
     width: 100%;
     height: 3rem;
@@ -71,6 +81,78 @@ a:link, a:visited {
     background-color: darkgreen;
 }
 
+.footerNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* margin: -10px; */
+    outline: 10px solid black;
+}
+
+.footerNavbarOptions {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerNavbarOptions li {
+    list-style: none;
+
+}
+
+.socialMedia a {
+    text-decoration: none;
+}
+.thanks {
+    margin-right: 20rem;
+}
+
+.followUs {
+
+}
+.socialMedia {
+    color: black;
+    margin-top: .5px;
+    margin-right: 20rem;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border-color: black;
+    margin-left: 5px;
+    margin-right: 5px;
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 20px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+    transform: scale(1)
+}
+
+.icon:hover {
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    background-color: #322f30;
+    transform: scale(1.3)
+}
+
 .content {
     margin-top: 4rem;
 }
@@ -115,7 +197,29 @@ a:link, a:visited {
     border-radius: 80%;
 }
 
-.getStarted {
+.getStartedRestaurants {
+    margin: 0 auto;
+    margin-top: 4rem;
+    height: 50px;
+    width: 50%;
+    border-radius: 100px;
+    text-align: center;
+    background: orangered;
+    font-size: 24px;
+}
+
+.getStartedMenus {
+    margin: 0 auto;
+    margin-top: 4rem;
+    height: 50px;
+    width: 50%;
+    border-radius: 100px;
+    text-align: center;
+    background: orangered;
+    font-size: 24px;
+}
+
+.getStartedItems {
     margin: 0 auto;
     margin-top: 4rem;
     height: 50px;
@@ -150,6 +254,7 @@ a:link, a:visited {
 .exampleRestaurants {
     margin: 0 auto;
     margin-top: 4rem;
+  
 }
 
 .exampleRestaurants img {
@@ -164,7 +269,7 @@ a:link, a:visited {
 
 table {
     margin: 0 auto;
-    background-image: url(http://www.tobaccofreenow.org/wp-content/uploads/color-pages-court-prather-unsplash-1200x800lian-restaurant-backgrounds-phenomenal-restaurants-that-are-killing-it-on-instagram-belle-672x448.jpg); 
+    background-image: url(https://previews.123rf.com/images/adamson/adamson1202/adamson120200007/12305873-restaurant-background-vector-illustration.jpg);
     background-size: cover;
     table-layout: fixed;
     width: 80%;
