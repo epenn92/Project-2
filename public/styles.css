@@ -132,3 +132,36 @@ text-decoration: none;
     padding: 20px;
 }
 
+.exampleRestaurants {
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.exampleRestaurants img {
+    width: 100px;
+    height: 150px;
+}
+
+.tableHeader {
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    background-image: url(http://www.tobaccofreenow.org/wp-content/uploads/color-pages-court-prather-unsplash-1200x800lian-restaurant-backgrounds-phenomenal-restaurants-that-are-killing-it-on-instagram-belle-672x448.jpg); 
+    background-size: cover;
+    table-layout: fixed;
+    width: 80%;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table tr th  {
+    border: 1px solid black;
+}
+
+table td {
+    border: 1px solid black;
+}
