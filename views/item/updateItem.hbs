@@ -1,4 +1,4 @@
-<h1>Edit Item</h1>
+<h1>Edit Item for {{singleRestaurant.name}}</h1>
 
 <form method="POST" action="/item/{{item._id}}?_method=PUT">
 
@@ -8,6 +8,14 @@
   <input type="number" value="{{item.price}}" placeholder="Price of dish" name="price" />
 
   <input type="text" value="{{item.review}}" placeholder="Scale from 1-5 5 being the best!" name="review" />
+
+{{!-- <select name="menuId">
+  {{#each allMenus}}
+<option value="new/{{_id}}" {{#if selected}} selected
+{{/if}}>{{type}}</option>
+
+{{/each}}
+</select> --}}
 
   <input type="submit" value="Update Item" />
 

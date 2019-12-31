@@ -36,6 +36,8 @@ const deleteRestaurant = restaurantId => {
   return RestaurantCollection.deleteOne({ _id: restaurantId })
 }
 
+
+
 module.exports = {
   getRestaurantById,
   getAllRestaurants,

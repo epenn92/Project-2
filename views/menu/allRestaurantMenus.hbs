@@ -23,3 +23,13 @@
 <a href="/">
 <button>Back to landing page</button>
 </a>
+
+{{#each allRestaurants}}
+  
+   <option value="new/{{_id}}" {{#if selected}} selected
+   {{/if}}>{{name}}</option>
+   {{/each}}
+
+
+  </select>
+

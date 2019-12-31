@@ -22,14 +22,35 @@ itemRouter.get('/', async (req, res) => {
   }
 })
 
-itemRouter.get('/new', (req, res) => {
-  res.render('item/createItem')
+itemRouter.get('/new', async (req, res) => {
+  try {
+    const allRestaurants = await restaurantApi.getAllRestaurants();
+    res.render('item/whichRestaurant', { allRestaurants })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
+})
+
+itemRouter.get('/new/:restaurantId', async (req, res) => {
+  try {
+    const singleRestaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    const allMenus = await menuApi.getAllMenuByRestaurantId(singleRestaurant._id)
+    res.render('item/createItem', { singleRestaurant, allMenus })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
 })
 
 itemRouter.get('/update/:itemId', async (req, res) => {
   try {
     const item = await itemApi.getItemById(req.params.itemId)
-    res.render('item/updateItem', { item })
+    const singleRestaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    // const allMenus = await menuApi.getAllMenuByRestaurantId(singleRestaurant._id)
+    res.render('item/updateItem', { item, singleRestaurant })
   }
   catch (error) {
     console.log(error)
