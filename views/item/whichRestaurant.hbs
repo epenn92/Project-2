@@ -5,9 +5,9 @@
 <form metod="POST" action="/item/">
 <select name="restaurantId" onchange="location = this.value;">
 
-    
+     <option value="">None</option>
    {{#each allRestaurants}}
-  
+ 
    <option value="new/{{_id}}" {{#if selected}} selected
    {{/if}}>{{name}}</option>
    {{/each}}
