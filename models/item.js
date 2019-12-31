@@ -2,10 +2,12 @@
 const mongoose = require('./connection.js')
 
 const ItemSchema = new mongoose.Schema({
+  restaurantId: String,
   menuId: String,
+  restaurantId: String,
   foodName: String,
   price: Number,
-  
+
 })
 
 const ItemCollection = mongoose.model('item', ItemSchema)
@@ -30,11 +32,21 @@ const deleteItem = (itemId) => {
   return ItemCollection.deleteOne({ _id: itemId })
 }
 
+const getItemByRestaurantId = restaurantId => {
+  return ItemCollection.findOne({ restaurantId })
+}
+
+const getAllItemsByMenuId = menuId => {
+  return ItemCollection.find({ menuId })
+}
+
 module.exports = {
   getItemById,
   getAllItems,
   createItem,
   updateItem,
-  deleteItem
+  deleteItem,
+  getItemByRestaurantId,
+  getAllItemsByMenuId
 
 }

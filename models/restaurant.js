@@ -36,12 +36,15 @@ const deleteRestaurant = restaurantId => {
   return RestaurantCollection.deleteOne({ _id: restaurantId })
 }
 
-
+const getRestaurantByItemId = itemId => {
+  return RestaurantCollection.findOne({ itemId })
+}
 
 module.exports = {
   getRestaurantById,
   getAllRestaurants,
   createRestaurant,
   updateRestaurant,
-  deleteRestaurant
+  deleteRestaurant,
+  getRestaurantByItemId
 }

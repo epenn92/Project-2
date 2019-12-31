@@ -14,6 +14,7 @@ const itemRouter = express.Router()
 itemRouter.get('/', async (req, res) => {
   try {
     const allItems = await itemApi.getAllItems();
+    console.log(allItems)
     res.render('item/allItems', { allItems })
   }
   catch (error) {
@@ -37,6 +38,8 @@ itemRouter.get('/new/:restaurantId', async (req, res) => {
   try {
     const singleRestaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
     const allMenus = await menuApi.getAllMenuByRestaurantId(singleRestaurant._id)
+    console.log(singleRestaurant)
+    console.log(allMenus)
     res.render('item/createItem', { singleRestaurant, allMenus })
   }
   catch (error) {
@@ -48,7 +51,7 @@ itemRouter.get('/new/:restaurantId', async (req, res) => {
 itemRouter.get('/update/:itemId', async (req, res) => {
   try {
     const item = await itemApi.getItemById(req.params.itemId)
-    const singleRestaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    const singleRestaurant = await restaurantApi.getRestaurantByItemId(req.params.restaurantId)
     // const allMenus = await menuApi.getAllMenuByRestaurantId(singleRestaurant._id)
     res.render('item/updateItem', { item, singleRestaurant })
   }
@@ -62,9 +65,8 @@ itemRouter.get('/update/:itemId', async (req, res) => {
 itemRouter.get('/:itemId', async (req, res) => {
   const singleItem = await itemApi.getItemById(req.params.itemId)
   try {
-
-
-    res.render('item/singleItem', { singleItem })
+    // const singleRestaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    res.render('item/singleItem', { singleItem, })
   }
   catch (error) {
     console.log(error)

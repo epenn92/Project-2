@@ -3,6 +3,7 @@ const mongoose = require('./connection.js')
 
 const MenuSchema = new mongoose.Schema({
   restaurantId: String,
+  itemId: String,
   size: String,
   time: String,
   type: String,
@@ -38,6 +39,8 @@ const getAllMenuByRestaurantId = (restaurantId) => {
 const getMenuByRestaurant = (restaurantId, menuId) => {
   return MenuCollection.find(restaurantId, { _id: menuId })
 }
+
+
 
 module.exports = {
   getMenuById,

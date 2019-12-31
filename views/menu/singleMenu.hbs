@@ -1,6 +1,5 @@
-<h1>Menu for {{allRestaurants.name}}</h1>
+<h1>{{singleMenu.type}} Menu for {{allRestaurants.name}}</h1>
 
-<h1>{{singleMenu.type}}</h1>
 {{!-- <h2>{{singleMenu._id}}</h2> --}}
 
 <h4>{{singleMenu.size}}</h4>
@@ -11,6 +10,8 @@
 <h3>View this restaurant!</h3>
 </a>
 
+<a href="/menu/menuItems/{{singleMenu._id}}">
+<h3>View Items on this menu</h3></a>
 
 <a href="/menu/update/{{singleMenu._id}}">
 <button>Edit Menu</button>

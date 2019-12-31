@@ -4,7 +4,7 @@ const express = require('express')
 
 const menuApi = require('../models/menu.js')
 const restaurantApi = require('../models/restaurant.js')
-
+const itemApi = require('../models/item.js')
 const menuRouter = express.Router()
 
 
@@ -82,6 +82,19 @@ menuRouter.get('/allRestaurantMenus/:restaurantId', async (req, res) => {
     const allMenus = await menuApi.getAllMenuByRestaurantId(restaurant._id)
     console.log('allMenus', allMenus)
     res.render('menu/allRestaurantMenus', { restaurant, allMenus })
+  }
+  catch (error) {
+    console.log(error)
+    res.send(error)
+  }
+})
+
+menuRouter.get('/menuItems/:menuId', async (req, res) => {
+  try {
+    const menu = await menuApi.getMenuById(req.params.menuId)
+    const allItems = await itemApi.getAllItemsByMenuId(menu._id)
+    console.log('allItems', allItems)
+    res.render('menu/menuItems', { menu, allItems })
   }
   catch (error) {
     console.log(error)

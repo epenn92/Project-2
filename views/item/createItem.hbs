@@ -10,11 +10,13 @@
 
 <select name="menuId">
   {{#each allMenus}}
-<option value="new/{{_id}}" {{#if selected}} selected
+<option value="{{_id}}" {{#if selected}} selected
 {{/if}}>{{type}}</option>
 
 {{/each}}
 </select>
+
+<input type="hidden" value="{{singleRestaurant._id}}" name="restaurantId">
 
   <input type="submit" value="Create Item" />
 

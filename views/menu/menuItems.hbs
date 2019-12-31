@@ -1,0 +1,11 @@
+<h1>All items for {{menu.type}}</h1>
+
+{{#each allItems}}
+<a href="/item/{{_id}}">
+<h3>{{foodName}}</h3>
+</a>
+{{/each}}
+
+<a href="/menu/{{menu._id}}">
+<h3> Back to menu</h3>
+</a>
