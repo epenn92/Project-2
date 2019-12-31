@@ -4,7 +4,11 @@ body {
     font-family: 'Acme', sans-serif;
 }
 
+
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: lightgreen;
     position: fixed;
     width: 100%;
@@ -17,15 +21,23 @@ body {
 }
 
 a:link, a:visited {
-color: black;
-text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
+.navbarOptions li a:link, a:visited {
+    color: black;
+    text-decoration: none;
+    }
+
 .navbarOptions {
-    width: 85%;
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 95%;
     margin: 0 auto;
     list-style: none;
-   height: 2.9rem;
+
 }
 
 .brand {
@@ -38,11 +50,11 @@ text-decoration: none;
 .brand img {
     position: absolute;
     display: inline-block;
-    height: 3rem;
+    height: 95%;
     border-right: 1px solid black;
     border-left: 1px solid black;
     z-index: 1;
-    margin-top: 1.2rem;
+   
 }
 
 .navbarOptions li {
@@ -50,11 +62,13 @@ text-decoration: none;
     height: 2.9rem;
     font-family: 'Acme', sans-serif;
     line-height: 2.8rem;
-    margin-left: 3.5rem;
-    margin-right: 3.5rem;
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
     margin-bottom: 0;
-    margin-top: -1.2rem;
+}
 
+.navbarOptions li a:hover {
+    background-color: darkgreen;
 }
 
 .content {
@@ -215,3 +229,25 @@ table td {
     
 }
 
+.restaurantPage {
+    color: white;
+    background-color: skyblue;
+    background-image: url(https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+    background-size: cover;
+}
+
+h3 {
+color: white;
+}
+
+.menuPage {
+    color: white;
+    background-image: url(https://i.dlpng.com/static/png/4000384-simple-restaurant-menu-background-material-simple-line-western-western-background-png-650_498_preview.webp);
+    background-size: cover;
+}
+
+.itemPage {
+    color: white;
+    background-image: url(https://image.freepik.com/free-photo/tasty-fresh-appetizing-italian-food-ingredients-dark-background_1220-1741.jpg);
+    background-size: cover;
+}
