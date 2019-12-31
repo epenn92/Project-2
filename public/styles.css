@@ -1,6 +1,7 @@
 body {
     background-color: silver;
-    color: gold;
+    color: black;
+    font-family: 'Acme', sans-serif;
 }
 
 .navbar {
@@ -24,7 +25,7 @@ text-decoration: none;
     width: 85%;
     margin: 0 auto;
     list-style: none;
-   
+   height: 2.9rem;
 }
 
 .brand {
@@ -34,6 +35,16 @@ text-decoration: none;
     height: 2.9rem;
 }
 
+.brand img {
+    position: absolute;
+    display: inline-block;
+    height: 3rem;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    z-index: 1;
+    margin-top: 1.2rem;
+}
+
 .navbarOptions li {
     display: inline-block;
     height: 2.9rem;
@@ -41,8 +52,83 @@ text-decoration: none;
     line-height: 2.8rem;
     margin-left: 3.5rem;
     margin-right: 3.5rem;
+    margin-bottom: 0;
+    margin-top: -1.2rem;
+
 }
 
 .content {
     margin-top: 4rem;
 }
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    width: 73%;
+    margin: 0 auto;
+}
+
+.testimonials {
+    width: 20%;
+    text-align: right;
+    margin: 0 auto;
+}
+
+.intro {
+    font-size: 50px;
+    border: 5px solid black;
+    border-radius: 100px;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 20px;
+}
+
+.restaurantLogos1 {
+    margin-top: 4rem;
+}
+
+.restaurantLogos1 img {
+    width: 16%;
+    height: 100px;
+    margin-right: 2%;
+    border: 5px solid black;
+    border-radius: 80%;
+}
+
+.getStarted {
+    margin: 0 auto;
+    margin-top: 4rem;
+    height: 50px;
+    width: 50%;
+    border-radius: 100px;
+    text-align: center;
+    background: orangered;
+}
+
+.restaurantLogos2 {
+    margin-top: 4rem;
+}
+
+.restaurantLogos2 img {
+    width: 16%;
+    height: 100px;
+    margin-right: 2%;
+    border: 5px solid black;
+    border-radius: 80%;
+}
+
+.slogan {
+    font-size: 50px;
+    border: 5px solid black;
+    border-radius: 100px;
+    text-align: center;
+    margin-top: 4rem;
+    padding: 20px;
+}
+
