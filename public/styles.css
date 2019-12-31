@@ -1,3 +1,8 @@
+html {
+    width: 100%;
+    min-height: 100vh;
+}
+
 body {
     /* background-color: silver; */
     color: black;
@@ -5,9 +10,9 @@ body {
      /* fallback for old browsers */
 background: -webkit-linear-gradient(to top, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to top, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
-
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
 }
 
 
@@ -88,13 +93,19 @@ a:link, a:visited {
     background: #485563;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    width: 100%;
-    height: 100%;
+    position: absolute;
+    /* width: 20%;
+    height: 20%; */
     bottom: 0;
     left: 0;
     right: 0;
     /* margin: -10px; */
     outline: 10px solid black;
+    margin-top: 5rem;
+}
+
+.wrap {
+    /* padding-bottom: 10rem; */
 }
 
 .footerNavbarOptions {
@@ -288,7 +299,7 @@ table td {
 
 .testimonials {
     margin-top: 15rem;
-    
+    margin-bottom: 5rem;
 }
 
 .testimonialsHeader {
