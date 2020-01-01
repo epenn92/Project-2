@@ -1,19 +1,36 @@
 <body class="restaurantPage">
+<div class="allRestaurantContainer">
+    <div class="restaurantItems">
+<h1 class="allRestaurantsTitle"> All Restaurants </h1>
 
-<h1> All Restaurants </h1>
+
+<table class="allRestaurantTable">
+
+    <tr>
+         <th></th>
+         <th>Restaurant</th>
+         <th>Price Range</th>
+         <th>Open?</th> 
+         <th>Rating</th>
+         <th>Address</th>
+             </tr>
+{{#each allRestaurants}}
+              <tr>
+               <td><a href="/restaurant/{{_id}}"><img src="{{logo}}"></a></td>
+                <td><a href="/restaurant/{{_id}}">
+                {{name}}</a></td>
+                <td>{{priceRange}}</td>
+                <td>{{isOpen}}</td>
+                <td>{{rating}}</td>
+                <td>{{location}}</td>
+                </tr>
+
+{{/each}}
+</table>
 
 <a href="/restaurant/new">
 <button class="restaurantButton">Create New Restaurant</button>
 </a>
-
-{{#each allRestaurants}}
-<a href="/restaurant/{{_id}}">
-<div>
-    <h3>{{name}}</h3>
 </div>
-</a>
-
-{{/each}}
-
-
+</div>
 </body>

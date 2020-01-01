@@ -7,7 +7,8 @@ const RestaurantSchema = new mongoose.Schema({
   operationDays: Date,
   isOpen: Boolean,
   priceRange: String,
-  rating: String
+  rating: String,
+  logo: String
 })
 
 const RestaurantCollection = mongoose.model('restaurant', RestaurantSchema)

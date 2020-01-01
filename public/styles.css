@@ -102,6 +102,7 @@ a:link, a:visited {
     /* margin: -10px; */
     outline: 10px solid black;
     margin-top: 5rem;
+    border-right: 10px solid black;
 }
 
 .wrap {
@@ -115,7 +116,7 @@ a:link, a:visited {
 
 .footerNavbarOptions li {
     list-style: none;
-
+    color: black;
 }
 
 .socialMedia a {
@@ -278,7 +279,7 @@ a:link, a:visited {
     text-align: center;
 }
 
-table {
+.restaurantTable {
     margin: 0 auto;
     background-image: url(https://previews.123rf.com/images/adamson/adamson1202/adamson120200007/12305873-restaurant-background-vector-illustration.jpg);
     background-size: cover;
@@ -346,7 +347,7 @@ table td {
 }
 
 .restaurantPage {
-    color: white;
+    color: bisque;
     background-color: skyblue;
     background-image: url(https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
     background-size: cover;
@@ -372,4 +373,76 @@ color: white;
     text-align: center;
     background-color: darkgreen;
     margin: 0 auto;
+}
+
+.allRestaurantContainer {
+    display: flex;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    min-height: 150vh;
+   
+}
+
+.restaurantItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.allRestaurantsTitle {
+    font-size: 48px;
+    line-height: 4rem;
+    border: 5px solid rgb(16, 36, 16);
+    /* outline: 8px solid red; */
+    border-radius: 100px;
+    padding: 10px;
+    background-color: rgba(59, 180, 154, 0.562);
+    color: rgb(184, 156, 124);
+    width: 50%;
+    text-align: center;
+    letter-spacing: .2em;
+}
+
+.allRestaurantTable {
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 80%;
+    border-radius: 50px;
+    border-collapse: collapse;
+    text-align: center;
+    min-height: 100vh;
+    background-color: rgba(36, 51, 48, 0.623);
+}
+
+.allRestaurantTable a {
+    color: bisque;
+}
+
+
+.allRestaurantTable tr th  {
+    border: 5px solid black;
+    border-radius: 50px;
+    font-size: 36px;
+}
+
+.allRestaurantTable td {
+    border: 5px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.allRestaurantTable img {
+    width: 150px;
+    height: 75px;
+    padding: 5px;
+}
+
+.restaurantButton {
+    
 }
