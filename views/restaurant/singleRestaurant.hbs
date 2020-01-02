@@ -1,26 +1,55 @@
 <body class="restaurantPage">
+<div class="singleRestaurant">
+<div class="singleRestaurantItems">
 
+
+<img src="{{singleRestaurant.logo}}">
+   
 <h1>{{singleRestaurant.name}}</h1>
+    
+<table class="singleTable">
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+    <td><h4><span>Location:</span></h4></td>
+    <td><h4>{{singleRestaurant.location}}</h4>
+    </td></tr>
+      <tr>
+    <td><h4><span>Operation Days:</span></h4></td>
+    <td><h4>{{singleRestaurant.operationDays}}</h4>
+    </td></tr>
+      <tr>
+    <td><h4><span>Open?</span></h4></td>
+    <td><h4>{{singleRestaurant.isOpen}}</h4>
+    </td></tr>
+      <tr>
+    <td><h4><span>Price Range:</span></h4></td>
+    <td><h4>{{singleRestaurant.priceRange}}</h4>
+    </td></tr>
+    <tr>
+    <td><h4><span>Rating:</span></h4></td>
+    <td><h4>{{singleRestaurant.rating}}</h4>
+    </td></tr>
 
-<h4>{{singleRestaurant.location}}</h4>
-<h4>{{singleRestaurant.operationDays}}</h4>
-<h4>{{singleRestaurant.isOpen}}</h4>
-<h4>{{singleRestaurant.priceRange}}</h4>
-<h4>{{singleRestaurant.rating}}</h4>
+</table>
 
 
 <a href="/menu/allRestaurantMenus/{{singleRestaurant._id}}">
-<button>View All Menus!</button>
+<button class="restaurantButton">View All Menus!</button>
 </a>
 
 
 <a href="/restaurant/update/{{singleRestaurant._id}}">
-<button>Edit Restaurant</button>
+<button class="restaurantButton">Edit Restaurant</button>
 </a>
 
 <form method="POST" action="/restaurant/{{singleRestaurant._id}}?_method=DELETE">
-<input type="submit" value="Delete"/>
+<button type="submit" class="restaurantButton">Delete</button>
 </form>
 
+</div>
+</div>
 
 </body>

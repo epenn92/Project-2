@@ -290,11 +290,11 @@ a:link, a:visited {
     text-align: center;
 }
 
-table tr th  {
+.restaurantTable tr th  {
     border: 1px solid black;
 }
 
-table td {
+.restaurantTable td {
     border: 1px solid black;
 }
 
@@ -421,6 +421,9 @@ color: white;
     color: bisque;
 }
 
+.allRestaurantTable a:hover {
+    color: rgb(108, 175, 238)
+}
 
 .allRestaurantTable tr th  {
     border: 5px solid black;
@@ -444,5 +447,65 @@ color: white;
 }
 
 .restaurantButton {
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    margin-top: .5rem;
+    background: #1b413bce;
+    color: bisque;
+    text-align: center;
+    cursor: pointer;
+}
+
+.restaurantButton:hover {
+    transition: background-color .5s smooth;
+    background-color: rgba(47, 100, 121, 0.842);
+}
+
+.singleRestaurant {
+    display: flex;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    min-height: 130vh;
+   
+}
+
+.singleRestaurantItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.singleTable {
+    width: 55%;
+    min-height: 60vh;
+    margin: 0 auto;
+    table-layout: auto;
+    border-radius: 50px;
+    border-collapse: collapse;
+    /* text-align: center; */
+    background-color: rgba(36, 51, 48, 0.623);
+}
+
+.singleTable tr th  {
+    font-size: 36px;
+}
+
+.singleTable td {
     
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.singleTable td h4 span {
+    display: inline-block;
+    text-align: left;
+    margin-right: 30px;
 }
