@@ -24,7 +24,7 @@
   </h4></td></tr>
 
  <tr>
-  <td><h4><span>Days of Operation:</span></h4></td>
+  <td><h4><span>Edit Date:</span></h4></td>
   <td><h4>   
   <input type="date" value="{{restaurant.operationDays}}" name="operationDays" />
   </h4></td></tr>
@@ -32,13 +32,25 @@
  <tr>
   <td><h4><span>Open Now?</span></h4></td>
   <td><h4>   
-  <input type="boolean" value="{{restaurant.isOpen}}" placeholder="Open now?" name="isOpen" />
+  <select name="isOpen">
+    <option value="{{restaurant.isOpen}}">{{restaurant.isOpen}}</option>
+    <option value="">Not Sure</option>
+    <option value="Yes">Open</option>
+    <option value="No">Closed</option>
+  </select>
   </h4></td></tr>
 
  <tr>
   <td><h4><span>Price Range:</span></h4></td>
   <td><h4>   
-  <input type="text" value="{{restaurant.priceRange}}" placeholder="Price Range" name="priceRange" />
+  <select name="priceRange">
+    <option value="{{restaurant.priceRange}}">{{restaurant.priceRange}}</option>
+    <option value="">Not Sure</option>
+    <option value="$">$-Low</option>
+    <option value="$$">$$-Average</option>
+    <option value="$$$">$$$-High</option>
+    <option value="$$$$">$$$$-Expensive</option>
+  </select>
   </h4></td></tr>
 
  <tr>
@@ -46,11 +58,11 @@
   <td><h4>   
   <select name="rating">
     <option value="{{restaurant.rating}}">{{restaurant.rating}}</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
+    <option value="1">1-Horrible</option>
+    <option value="2">2-Bad</option>
+    <option value="3">3-Ok</option>
+    <option value="4">4-Good</option>
+    <option value="5">5-Amazing</option>
   </select>
   </h4></td></tr>
 

@@ -1,24 +1,29 @@
 <body class="menuPage">
+<div class="allMenuContainer">
+  <div class="menuItems">
 
-<h1>{{restaurant.name}}</h1>
+<h1 class="allMenuTitle">Menus For {{restaurant.name}}:</h1>
 
 
+<table class="allMenuTable">
 {{#each allMenus}}
+<tr><td>
 <a href="/menu/{{_id}}">
 <div>
     <h3>{{type}}</h3>
 </div>
 </a>
-
+</td></tr>
 {{/each}}
 
+</table>
 
 <a href="/restaurant/{{restaurant._id}}">
-<button>Back to {{restaurant.name}}</button>
+<button class="menuButton">Back to {{restaurant.name}}</button>
 </a>
 
 <a href="/menu/new">
-<button>Create a new menu</button>
+<button class="menuButton">Create a new menu</button>
 </a>
 
 
@@ -33,4 +38,7 @@
 
   </select>
 
+
+</div>
+</div>
 </body>

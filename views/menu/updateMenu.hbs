@@ -6,7 +6,7 @@
 
 <form class="menuForm" method="POST" action="/menu/{{menu._id}}?_method=PUT">
 <table class="singleTable">
-  
+
   <tr>
     <th></th>
     <th></th>
@@ -14,19 +14,34 @@
   <tr>
   <td><h4><span>Menu Size:</span></h4></td>
   <td><h4>   
-  <input type="text" value="{{menu.size}}" placeholder="How big is the menu?" name="size" />
+   <select name="size">
+    <option value="{{menu.size}}">{{menu.size}}</option>
+    <option value="small">Small</option>
+    <option value="Medium">Medium</option>
+    <option value="Large">Large</option>
+  </select>
   </h4></td></tr>
 
  <tr>
   <td><h4><span>Breakfast, Lunch, or Dinner Menu?</span></h4></td>
   <td><h4>   
-  <input type="text" value="{{menu.type}}" placeholder="Breakfast, lunch, or dinner menu?" name="type" />
+ <select name="type">
+    <option value="{{menu.type}}">{{menu.type}}</option>
+    <option value="breakfast">Breakfast</option>
+    <option value="Lunch">Lunch</option>
+    <option value="Dinner">Dinner</option>
+  </select>
   </h4></td></tr>
 
  <tr>
   <td><h4><span>Alcohol Served?</span></h4></td>
   <td><h4>   
-  <input type="boolean" value="{{menu.alcoholAvailable}}" placeholder="Do they serve alcohol?" name="alcoholAvailable" />
+   <select name="alcoholAvailable">
+    <option value="{{menu.alcoholAvailable}}">{{menu.alcoholAvailable}}</option>
+    <option value="">Not Sure</option>
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+  </select>
   </h4></td></tr>
 
  <tr>

@@ -6,9 +6,8 @@ const MenuSchema = new mongoose.Schema({
   name: String,
   itemId: String,
   size: String,
-  time: String,
   type: String,
-  alcoholAvailable: Boolean,
+  alcoholAvailable: String,
   menuLogo: String
 })
 

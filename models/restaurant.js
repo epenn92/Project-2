@@ -2,13 +2,32 @@
 const mongoose = require('./connection.js')
 
 const RestaurantSchema = new mongoose.Schema({
-  name: String,
-  location: String,
-  operationDays: Date,
-  isOpen: Boolean,
-  priceRange: String,
+  name: {
+    type: String,
+    required: true
+  },
+  location: {
+    type: String,
+    required: true
+  },
+  operationDays: {
+    type: Date,
+    default: Date.now
+  },
+  isOpen: {
+    type: String,
+    required: true
+  },
+  priceRange: {
+    type: String,
+    default: "2",
+    required: true
+  },
   rating: String,
-  logo: String,
+  logo: {
+    type: String,
+    required: true
+  },
   menuId: String
 })
 

@@ -24,21 +24,31 @@
   </h4></td></tr>
 
  <tr>
-  <td><h4><span>Days of Operation:</span></h4></td>
+  <td><h4><span>Creation Date:</span></h4></td>
   <td><h4>   
-  <input type="date" value="" name="operationDays" />
+  <input type="date" value="" name="operationDays" placeholder="leave blank if today" />
   </h4></td></tr>
 
  <tr>
   <td><h4><span>Open Now?</span></h4></td>
   <td><h4>   
-  <input type="boolean" value="" placeholder="Open now?" name="isOpen" />
+    <select name="isOpen">
+    <option value="">Not Sure</option>
+    <option value="Yes">Open</option>
+    <option value="No">Closed</option>
+  </select>
   </h4></td></tr>
 
  <tr>
   <td><h4><span>Price Range:</span></h4></td>
   <td><h4>   
-  <input type="text" value="" placeholder="Price Range" name="priceRange" />
+   <select name="priceRange">
+    <option value="">Not Sure</option>
+    <option value="$">$-Low</option>
+    <option value="$$">$$-Average</option>
+    <option value="$$$">$$$-High</option>
+    <option value="$$$$">$$$$-Expensive</option>
+  </select>
   </h4></td></tr>
 
  <tr>
@@ -46,11 +56,11 @@
   <td><h4>   
   <select name="rating">
     <option value="">None</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
+    <option value="1">1-Horrible</option>
+    <option value="2">2-Bad</option>
+    <option value="3">3-Ok</option>
+    <option value="4">4-Good</option>
+    <option value="5">5-Amazing</option>
   </select>
   </h4></td></tr>
 

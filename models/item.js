@@ -6,8 +6,14 @@ const ItemSchema = new mongoose.Schema({
   name: String,
   menuId: String,
   restaurantId: String,
-  foodName: String,
-  price: Number,
+  foodName: {
+    type: String,
+    required: true
+  },
+  price: {
+    type: Number,
+    required: true
+  },
   review: String
 
 })
