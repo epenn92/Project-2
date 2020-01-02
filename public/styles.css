@@ -363,7 +363,7 @@ color: white;
 .menuPage {
     color: white;
     background-image: url(https://github.com/epenn92/Project-2/blob/master/images/menuImage.png?raw=true);
-    background-size: cover;
+    background-size: contain;
 }
 
 .itemPage {
