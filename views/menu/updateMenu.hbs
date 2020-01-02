@@ -2,7 +2,7 @@
 <div class="singleMenu">
 <div class="singleMenuItems">
 
-<h1>Update Menu</h1>
+<h1>Update Menu for {{menu.name}}</h1>
 
 <form class="menuForm" method="POST" action="/menu/{{menu._id}}?_method=PUT">
 <table class="singleTable">
@@ -47,9 +47,10 @@
  <tr>
   <td><h4><span>Restaurant Name:</span></h4></td>
   <td><h4>   
-    <select name="name" >
+    <select name="restaurantId">
+      <option value="">None</option>
 {{#each allRestaurants}}
-<option value="{{_id}}" data-value="{{name}}" {{#if selected}} selected {{/if}}>{{name}}</option>
+<option value="{{_id}}" {{#if selected}} selected {{/if}}>{{name}}</option>
 {{/each}}
 </select>
   </h4></td></tr>

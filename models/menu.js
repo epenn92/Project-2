@@ -41,6 +41,10 @@ const getMenuByRestaurant = (restaurantId, menuId) => {
   return MenuCollection.find(restaurantId, { _id: menuId })
 }
 
+const getRestaurantNameById = name => {
+  return MenuCollection.find({ _id: name })
+}
+
 
 
 module.exports = {

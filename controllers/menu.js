@@ -13,6 +13,7 @@ const menuRouter = express.Router()
 menuRouter.get('/', async (req, res) => {
   try {
     const allMenus = await menuApi.getAllMenus()
+
     res.render('menu/allMenus', { allMenus })
   }
   catch (error) {
@@ -24,6 +25,7 @@ menuRouter.get('/', async (req, res) => {
 menuRouter.get('/new', async (req, res) => {
   try {
     const allRestaurants = await restaurantApi.getAllRestaurants()
+
     console.log(allRestaurants)
     res.render('menu/createMenu', { allRestaurants })
   }
