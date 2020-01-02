@@ -12,7 +12,7 @@ const menuRouter = express.Router()
 
 menuRouter.get('/', async (req, res) => {
   try {
-    const allMenus = await menuApi.getAllMenus();
+    const allMenus = await menuApi.getAllMenus()
     res.render('menu/allMenus', { allMenus })
   }
   catch (error) {
@@ -68,6 +68,7 @@ menuRouter.get('/:menuId', async (req, res) => {
   try {
     const singleMenu = await menuApi.getMenuById(req.params.menuId)
     const allRestaurants = await restaurantApi.getRestaurantById(singleMenu.restaurantId)
+    console.log(singleMenu)
     res.render('menu/singleMenu', { singleMenu, allRestaurants })
   }
   catch (error) {

@@ -1,26 +1,42 @@
 <body class="itemPage">
+<div class="singleItem">
+<div class="singleItemItems">
 
-<h1>Edit Item for {{singleRestaurant.name}}</h1>
+<h1>Edit Item</h1>
 
-<form method="POST" action="/item/{{item._id}}?_method=PUT">
+<form class="itemForm" method="POST" action="/item/{{item._id}}?_method=PUT">
 
+<table class="singleTable">
+  
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+  <td><h4><span>Name of Food?</span></h4></td>
+  <td><h4>   
+    <input type="text" value="{{item.foodName}}" placeholder="Name of dish" name="foodName" />
+  </h4></td></tr>
 
-  <input type="text" value="{{item.foodName}}" placeholder="Name of dish" name="foodName" />
+ <tr>
+  <td><h4><span>Price of Food</span></h4></td>
+  <td><h4>   
+   <input type="number" value="{{item.price}}" placeholder="Price of dish" name="price" />
+  </h4></td></tr>
 
-  <input type="number" value="{{item.price}}" placeholder="Price of dish" name="price" />
-
+ <tr>
+  <td><h4><span>Review of Food</span></h4></td>
+  <td><h4>   
   <input type="text" value="{{item.review}}" placeholder="Scale from 1-5 5 being the best!" name="review" />
+  </h4></td></tr>
 
-{{!-- <select name="menuId">
-  {{#each allMenus}}
-<option value="new/{{_id}}" {{#if selected}} selected
-{{/if}}>{{type}}</option>
-
-{{/each}}
-</select> --}}
-
-  <input type="submit" value="Update Item" />
+  </table>
+  
+  <button class="itemButton" type="submit">Update Item</button>
 
 </form>
+
+</div>
+</div>
 
 </body>

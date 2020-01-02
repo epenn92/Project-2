@@ -3,11 +3,13 @@ const mongoose = require('./connection.js')
 
 const MenuSchema = new mongoose.Schema({
   restaurantId: String,
+  name: String,
   itemId: String,
   size: String,
   time: String,
   type: String,
-  alcoholAvailable: Boolean
+  alcoholAvailable: Boolean,
+  menuLogo: String
 })
 
 const MenuCollection = mongoose.model('menu', MenuSchema)

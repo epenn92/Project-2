@@ -3,10 +3,12 @@ const mongoose = require('./connection.js')
 
 const ItemSchema = new mongoose.Schema({
   restaurantId: String,
+  name: String,
   menuId: String,
   restaurantId: String,
   foodName: String,
   price: Number,
+  review: String
 
 })
 

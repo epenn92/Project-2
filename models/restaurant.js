@@ -8,7 +8,8 @@ const RestaurantSchema = new mongoose.Schema({
   isOpen: Boolean,
   priceRange: String,
   rating: String,
-  logo: String
+  logo: String,
+  menuId: String
 })
 
 const RestaurantCollection = mongoose.model('restaurant', RestaurantSchema)
@@ -21,8 +22,8 @@ const getAllRestaurants = () => {
   return RestaurantCollection.find({})
 }
 
-const getRestaurantByName = name => {
-  return RestaurantCollection.findOne({ name: name })
+const getRestaurantNameById = (restaurantId, name) => {
+  return RestaurantCollection.find(restaurantId, { name })
 }
 
 const createRestaurant = newRestaurant => {
@@ -41,11 +42,17 @@ const getRestaurantByItemId = itemId => {
   return RestaurantCollection.findOne({ itemId })
 }
 
+const getRestaurantByMenuId = menuId => {
+  return RestaurantCollection.find({ menuId })
+}
+
 module.exports = {
   getRestaurantById,
   getAllRestaurants,
   createRestaurant,
   updateRestaurant,
   deleteRestaurant,
-  getRestaurantByItemId
+  getRestaurantByItemId,
+  getRestaurantByMenuId,
+  getRestaurantNameById
 }

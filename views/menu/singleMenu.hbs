@@ -1,26 +1,45 @@
+
 <body class="menuPage">
+<div class="singleMenu">
+<div class="singleMenuItems">
 
-<h1>{{singleMenu.type}} Menu for {{allRestaurants.name}}</h1>
+<h1>{{singleMenu.type}} Menu For {{allRestaurants.name}}</h1>
+    
+<table class="singleTable">
+    <tr>
+        <th></th>
+        <th></th>
+    </tr>
+    <tr>
+    <td><h4><span>Menu Size:</span></h4></td>
+    <td><h4>{{singleMenu.size}}</h4>
+    </td></tr>
+      <tr>
+    <td><h4><span>Alcohol Available?</span></h4></td>
+    <td><h4>{{singleMenu.alcoholAvailable}}</h4>
+    </td></tr>
+      
 
-{{!-- <h2>{{singleMenu._id}}</h2> --}}
-
-<h4>{{singleMenu.size}}</h4>
-<h4>{{singleMenu.time}}</h4>
-<h4>{{singleMenu.alcoholAvailable}}</h4>
+</table>
 
 <a href="/restaurant/{{allRestaurants._id}}">
-<h3>View this restaurant!</h3>
+<button class="menuButton">Back to Restaurant!</button>
 </a>
 
 <a href="/menu/menuItems/{{singleMenu._id}}">
-<h3>View Items on this menu</h3></a>
+<button class="menuButton">View Items on This Menu!</button>
+</a>
+
 
 <a href="/menu/update/{{singleMenu._id}}">
-<button>Edit Menu</button>
+<button class="menuButton">Edit Menu</button>
 </a>
 
 <form method="POST" action="/menu/{{singleMenu._id}}?_method=DELETE">
-<input type="submit" value="Delete"/>
+<button type="submit" class="menuButton">Delete</button>
 </form>
+
+</div>
+</div>
 
 </body>

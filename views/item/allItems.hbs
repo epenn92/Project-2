@@ -1,18 +1,38 @@
 <body class="itemPage">
+<div class="allItemContainer">
+    <div class="itemItems">
+<h1 class="allItemTitle"> All Items </h1>
 
-<h1> All Items </h1>
 
-<a href="/item/new">
-<button>Create New Item</button>
-</a>
+<table class="allItemTable">
 
+    <tr>
+            {{!-- <th></th> --}}
+         <th>Food Name</th>
+         <th>Price</th>
+         <th>Review</th>
+         <th>Restaurant</th>
+         <th>Link</th>
+         
+    
+             </tr>
 {{#each allItems}}
-<a href="/item/{{_id}}">
-<div>
-    <h3>{{foodName}}</h3>
-</div>
-</a>
+              <tr>
+               {{!-- <td><a href="/item/{{_id}}"><img src="{{logo}}"></a></td> --}}
+                <td><a href="/item/{{_id}}">
+                {{foodName}}</a></td>
+                <td>{{price}}</td>
+                <td>{{review}}</td>
+               <td><a href="../restaurant/{{restaurantId}}">{{name}}</a></td>
+                <td><a href="../menu/{{menuId}}">Menu</a></td>
+                </tr>
 
 {{/each}}
+</table>
 
+<a href="/item/new">
+<button class="itemButton">Create New Item</button>
+</a>
+</div>
+</div>
 </body>

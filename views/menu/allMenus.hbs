@@ -1,19 +1,34 @@
 <body class="menuPage">
+<div class="allMenuContainer">
+    <div class="menuItems">
+<h1 class="allMenuTitle"> All Menus </h1>
 
-<h1> All Menus </h1>
+<table class="allMenuTable">
 
-<a href="/menu/new">
-<button>Create New Menu</button>
-</a>
+    <tr>
+        <th>Restaurant</th>
+        <th>Menu</th>
+        <th>Size</th>
+        <th>Serves Alcohol?</th>
+    </tr>
 
 {{#each allMenus}}
-<a href="/menu/{{_id}}">
-<div>
-    <h3>{{type}}</h3>
-</div>
-</a>
+    <tr>
+       
+        <td>{{name}}</td>
+        <td><a href="/menu/{{id}}">{{type}}</a></td>
+        <td>{{size}}</td>
+        <td>{{alcoholAvailable}}</td>
 
+    </tr>
 {{/each}}
 
+</table>
 
+<a href="/menu/new">
+<button class="menuButton">Create New Menu</button>
+</a>
+</div>
+</div>
 </body>
+

@@ -26,6 +26,7 @@ itemRouter.get('/', async (req, res) => {
 itemRouter.get('/new', async (req, res) => {
   try {
     const allRestaurants = await restaurantApi.getAllRestaurants();
+    console.log(allRestaurants)
     res.render('item/whichRestaurant', { allRestaurants })
   }
   catch (error) {
@@ -66,6 +67,7 @@ itemRouter.get('/:itemId', async (req, res) => {
   const singleItem = await itemApi.getItemById(req.params.itemId)
   try {
     // const singleRestaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
+    console.log(singleItem)
     res.render('item/singleItem', { singleItem, })
   }
   catch (error) {

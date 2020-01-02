@@ -1,25 +1,52 @@
 <body class="menuPage">
+<div class="singleMenu">
+<div class="singleMenuItems">
 
-<h1>Create menu</h1>
+<h1>Create A New Menu</h1>
 
-<form method="POST" action="/menu/">
-
+<form class="menuForm" method="POST" action="/menu/">
+<table class="singleTable">
+  
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+  <td><h4><span>Menu Size:</span></h4></td>
+  <td><h4>   
   <input type="text" value="" placeholder="How big is the menu?" name="size" />
+  </h4></td></tr>
 
-  <input type="text" value="" placeholder="Breakfast, lunch, or dinner menu?" name="time" />
+ <tr>
+  <td><h4><span>Breakfast, Lunch, or Dinner Menu?</span></h4></td>
+  <td><h4>   
+  <input type="text" value="" placeholder="Breakfast, lunch, or dinner menu?" name="type" />
+  </h4></td></tr>
 
-  <input type="text" value="" placeholder="What type of menu?" name="type" />
-
+ <tr>
+  <td><h4><span>Alcohol Served?</span></h4></td>
+  <td><h4>   
   <input type="boolean" value="" placeholder="Do they serve alcohol?" name="alcoholAvailable" />
-  {{!-- <label for=""></label> --}}
-  <select name="restaurantId" >
+  </h4></td></tr>
+
+ <tr>
+  <td><h4><span>Restaurant Name:</span></h4></td>
+  <td><h4>   
+    <select name="name" >
     <option value="">None</option>
 {{#each allRestaurants}}
-<option value="{{_id}}">{{name}}</option>
+<option value="{{name}}" data-value="{{_id}}">{{name}}</option>
 {{/each}}
 </select>
-  <input type="submit" value="Create Menu" />
+  </h4></td></tr>
+
+  </table>
+  
+  <button class="menuButton" type="submit">Create Menu</button>
 
 </form>
+
+</div>
+</div>
 
 </body>

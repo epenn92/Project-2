@@ -362,7 +362,7 @@ color: white;
 
 .menuPage {
     color: white;
-    background-image: url(https://i.dlpng.com/static/png/4000384-simple-restaurant-menu-background-material-simple-line-western-western-background-png-650_498_preview.webp);
+    background-image: url(https://github.com/epenn92/Project-2/blob/master/images/menuImage.png?raw=true);
     background-size: cover;
 }
 
@@ -370,13 +370,6 @@ color: white;
     color: white;
     background-image: url(https://image.freepik.com/free-photo/tasty-fresh-appetizing-italian-food-ingredients-dark-background_1220-1741.jpg);
     background-size: cover;
-}
-
-.restaurantButton {
-    text-align: center;
-    background-color: darkgreen;
-    margin: 0 auto;
-    align-items: center;
 }
 
 .allRestaurantContainer {
@@ -396,7 +389,7 @@ color: white;
     
 }
 
-.allRestaurantsTitle {
+.allRestaurantTitle {
     font-size: 48px;
     line-height: 4rem;
     border: 5px solid rgb(16, 36, 16);
@@ -426,7 +419,7 @@ color: white;
 }
 
 .allRestaurantTable a:hover {
-    /* color: rgb(108, 175, 238) */
+    color: rgb(108, 175, 238)
 }
 
 .allRestaurantTable tr th  {
@@ -541,6 +534,312 @@ color: white;
 }
 
 .restaurantForm input:focus, select:hover {
+    transition: background-color .5s smooth;
+    background-color: rgba(47, 100, 121, 0.842);
+}
+
+.allMenuContainer {
+    display: flex;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    min-height: 200vh;
+   
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.allMenuTitle {
+    font-size: 48px;
+    line-height: 4rem;
+    border: 5px solid rgb(16, 36, 16);
+    /* outline: 8px solid red; */
+    border-radius: 100px;
+    padding: 10px;
+    background-color: rgba(59, 180, 154, 0.562);
+    color: rgb(184, 156, 124);
+    width: 50%;
+    text-align: center;
+    letter-spacing: .2em;
+}
+
+.allMenuTable {
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 80%;
+    border-radius: 50px;
+    border-collapse: collapse;
+    text-align: center;
+    min-height: 100vh;
+    background-color: rgba(36, 51, 48, 0.623);
+}
+
+.allMenuTable a {
+    color: bisque;
+}
+
+.allMenuTable a:hover {
+    color: rgb(108, 175, 238)
+}
+
+.allMenuTable tr th  {
+    border: 5px solid black;
+    border-radius: 50px;
+    font-size: 36px;
+}
+
+.allMenuTable td {
+    border: 5px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.allMenuTable img {
+    width: 150px;
+    height: 75px;
+    padding: 5px;
+}
+
+.menuButton {
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    margin-top: .5rem;
+    background: #1b413bce;
+    color: bisque;
+    text-align: center;
+    cursor: pointer;
+}
+
+.restaurantMenu:hover {
+    transition: background-color .5s smooth;
+    background-color: rgba(47, 100, 121, 0.842);
+}
+
+.menuPage h1 {
+    margin: 0 auto;
+}
+
+.singleMenu {
+    display: flex;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    min-height: 150vh;
+   
+}
+
+.singleMenuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.singleMenu img {
+    width: 300px;
+    height: 200px;
+}
+
+.singleTable {
+    width: 55%;
+    min-height: 60vh;
+    margin: 0 auto;
+    table-layout: auto;
+    border-radius: 50px;
+    border-collapse: collapse;
+    /* text-align: center; */
+    background-color: rgba(36, 51, 48, 0.623);
+}
+
+.singleTable tr th  {
+    font-size: 36px;
+}
+
+.singleTable td {
+    
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.singleTable td h4 span {
+    display: inline-block;
+    text-align: left;
+    margin-right: 30px;
+}
+
+.menuForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menuForm input, select {
+    padding-left: 5px;
+    min-height: 25px;
+    min-width: 150px;
+    border: 3px solid black;
+    border-radius: 10px;
+    outline: none;
+}
+
+.menuForm input:hover, select:hover {
+    outline: none;
+    transition: background-color .5s smooth;
+    background-color: rgba(47, 100, 121, 0.842);
+}
+
+.menuForm input:focus, select:hover {
+    transition: background-color .5s smooth;
+    background-color: rgba(47, 100, 121, 0.842);
+}
+
+.allItemContainer {
+    display: flex;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    min-height: 200vh;
+   
+}
+
+.itemItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.allItemTitle {
+    font-size: 48px;
+    line-height: 4rem;
+    border: 5px solid rgb(16, 36, 16);
+    /* outline: 8px solid red; */
+    border-radius: 100px;
+    padding: 10px;
+    background-color: rgba(59, 180, 154, 0.562);
+    color: rgb(184, 156, 124);
+    width: 50%;
+    text-align: center;
+    letter-spacing: .2em;
+}
+
+.allItemTable {
+    margin: 0 auto;
+    table-layout: fixed;
+    width: 80%;
+    border-radius: 50px;
+    border-collapse: collapse;
+    text-align: center;
+    min-height: 100vh;
+    background-color: rgba(36, 51, 48, 0.623);
+}
+
+.allItemTable a {
+    color: bisque;
+}
+
+.allItemTable a:hover {
+    color: rgb(108, 175, 238)
+}
+
+.allItemTable tr th  {
+    border: 5px solid black;
+    border-radius: 50px;
+    font-size: 36px;
+}
+
+.allItemTable td {
+    border: 5px solid black;
+    border-radius: 50px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    text-transform: capitalize;
+}
+
+.allItemTable img {
+    width: 150px;
+    height: 75px;
+    padding: 5px;
+}
+
+.itemButton {
+    font-size: 24px;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    margin-top: .5rem;
+    background: #1b413bce;
+    color: bisque;
+    text-align: center;
+    cursor: pointer;
+}
+
+.itemButton:hover {
+    transition: background-color .5s smooth;
+    background-color: rgba(47, 100, 121, 0.842);
+}
+
+.singleItem {
+    display: flex;
+    /* margin: 0 auto; */
+    flex-direction: column;
+    justify-items: center;
+    width: 100%;
+    min-height: 150vh;
+   
+}
+
+.singleItemItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.singleItem img {
+    width: 300px;
+    height: 200px;
+}
+
+.itemForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.itemForm input, select {
+    padding-left: 5px;
+    min-height: 25px;
+    min-width: 150px;
+    border: 3px solid black;
+    border-radius: 10px;
+    outline: none;
+}
+
+.itemForm input:hover, select:hover {
+    outline: none;
+    transition: background-color .5s smooth;
+    background-color: rgba(47, 100, 121, 0.842);
+}
+
+.itemForm input:focus, select:hover {
     transition: background-color .5s smooth;
     background-color: rgba(47, 100, 121, 0.842);
 }
