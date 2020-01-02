@@ -1,19 +1,49 @@
 <body class="restaurantPage">
+<div class="singleRestaurant">
+<div class="singleRestaurantItems">
 
 <h1>Edit Restaurant</h1>
 
-<form method="POST" action="/restaurant/{{restaurant._id}}?_method=PUT">
-
+<form class="restaurantForm" method="POST" action="/restaurant/{{restaurant._id}}?_method=PUT">
+<table class="singleTable">
+  
+  <tr>
+    <th></th>
+    <th></th>
+  </tr>
+  <tr>
+  <td><h4><span>Name of restaurant:</span></h4></td>
+  <td><h4>   
   <input type="text" value="{{restaurant.name}}" placeholder="Restaurant" name="name" />
+  </h4></td></tr>
 
+ <tr>
+  <td><h4><span>Location:</span></h4></td>
+  <td><h4>   
   <input type="text" value="{{restaurant.location}}" placeholder="Address" name="location" />
+  </h4></td></tr>
 
+ <tr>
+  <td><h4><span>Days of Operation:</span></h4></td>
+  <td><h4>   
   <input type="date" value="{{restaurant.operationDays}}" name="operationDays" />
+  </h4></td></tr>
 
+ <tr>
+  <td><h4><span>Open Now?</span></h4></td>
+  <td><h4>   
   <input type="boolean" value="{{restaurant.isOpen}}" placeholder="Open now?" name="isOpen" />
+  </h4></td></tr>
 
+ <tr>
+  <td><h4><span>Price Range:</span></h4></td>
+  <td><h4>   
   <input type="text" value="{{restaurant.priceRange}}" placeholder="Price Range" name="priceRange" />
+  </h4></td></tr>
 
+ <tr>
+  <td><h4><span>Rating:</span></h4></td>
+  <td><h4>   
   <select name="rating">
     <option value="{{restaurant.rating}}">{{restaurant.rating}}</option>
     <option value="1">1</option>
@@ -22,11 +52,22 @@
     <option value="4">4</option>
     <option value="5">5</option>
   </select>
+  </h4></td></tr>
 
-  <input type="text" value="{{restaurant.logo}}" placeholder="Link to logo" name="logo" />
+ <tr>
+  <td><h4><span>Link To Logo:</span></h4></td>
+  <td><h4>   
+  <input type="text" value="{{restaurant.logo}}" placeholder="Link to logo" name="logo"/>
+  </h4></td></tr>
 
-  <input type="submit" value="Update Restaurant" />
+
+  </table>
+  
+  <button class="restaurantButton" type="submit">Update Restaurant</button>
 
 </form>
+
+</div>
+</div>
 
 </body>
