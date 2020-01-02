@@ -44,16 +44,18 @@
  <tr>
   <td><h4><span>Restaurant Name:</span></h4></td>
   <td><h4>   
-    <select name="name" >
+    <select name="restaurantId" >
     <option value="">None</option>
 {{#each allRestaurants}}
-<option value="{{name}}" data-value="{{_id}}">{{name}}</option>
+<option value="{{_id}}" data-value="{{name}}">{{name}}</option>
 {{/each}}
-</select>
+</select> 
   </h4></td></tr>
 
   </table>
-  
+    
+    <input type="hidden" name="name" value="{{allRestaurants.name}}">
+
   <button class="menuButton" type="submit">Create Menu</button>
 
 </form>

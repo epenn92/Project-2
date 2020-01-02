@@ -24,6 +24,7 @@ menuRouter.get('/', async (req, res) => {
 menuRouter.get('/new', async (req, res) => {
   try {
     const allRestaurants = await restaurantApi.getAllRestaurants()
+    console.log(allRestaurants)
     res.render('menu/createMenu', { allRestaurants })
   }
   catch (error) {
@@ -68,7 +69,7 @@ menuRouter.get('/:menuId', async (req, res) => {
   try {
     const singleMenu = await menuApi.getMenuById(req.params.menuId)
     const allRestaurants = await restaurantApi.getRestaurantById(singleMenu.restaurantId)
-    console.log(singleMenu)
+    console.log(allRestaurants)
     res.render('menu/singleMenu', { singleMenu, allRestaurants })
   }
   catch (error) {
@@ -81,7 +82,7 @@ menuRouter.get('/allRestaurantMenus/:restaurantId', async (req, res) => {
   try {
     const restaurant = await restaurantApi.getRestaurantById(req.params.restaurantId)
     const allMenus = await menuApi.getAllMenuByRestaurantId(restaurant._id)
-    console.log('allMenus', allMenus)
+    console.log(allMenus)
     res.render('menu/allRestaurantMenus', { restaurant, allMenus })
   }
   catch (error) {

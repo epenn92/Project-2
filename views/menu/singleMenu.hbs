@@ -3,7 +3,7 @@
 <div class="singleMenu">
 <div class="singleMenuItems">
 
-<h1>{{singleMenu.type}} Menu For {{allRestaurants.name}}</h1>
+<h1>{{singleMenu.type}} Menu For {{singleMenu.name}}</h1>
     
 <table class="singleTable">
     <tr>
@@ -22,8 +22,8 @@
 
 </table>
 
-<a href="/restaurant/{{allRestaurants._id}}">
-<button class="menuButton">Back to Restaurant!</button>
+<a href="/restaurant/">
+<button class="menuButton">Back to All Restaurants!</button>
 </a>
 
 <a href="/menu/menuItems/{{singleMenu._id}}">
